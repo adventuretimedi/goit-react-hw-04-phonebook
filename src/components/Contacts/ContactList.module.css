@@ -21,8 +21,8 @@ ul {
 
 .contactsBtn {
   display: flex;
-  align-items: flex-start;
-  justify-content: baseline;
+  align-items: center;
+  justify-content: center;
   max-width: 100px;
   display: flex;
   height: 30px;

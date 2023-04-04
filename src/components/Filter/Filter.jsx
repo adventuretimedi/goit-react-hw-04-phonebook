@@ -1,25 +1,22 @@
-import { Component } from 'react';
-import s from '../Filter/Filter.module.css';
+import s from './Filter.module.css';
 
-class Filter extends Component {
-  handleChange = e => {
+const Filter = ({ onFilterChanged }) => {
+  const handleChange = e => {
     const filter = e.currentTarget.value;
-    this.props.onFilterChanged(filter);
+    onFilterChanged(filter);
   };
 
-  render() {
-    return (
-      <label htmlFor="">
-        <p className={s.titleFind}>Find contacts by name</p>
-        <input
-          onChange={this.handleChange}
-          type="text"
-          name="filter"
-          className={s.inputFind}
-        />
-      </label>
-    );
-  }
-}
+  return (
+    <label htmlFor="">
+      <p className={s.titleFind}>Find contacts by name</p>
+      <input
+        onChange={handleChange}
+        type="text"
+        name="filter"
+        className={s.inputFind}
+      />
+    </label>
+  );
+};
 
 export default Filter;
