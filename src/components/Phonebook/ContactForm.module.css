@@ -20,9 +20,7 @@
 }
 
 .button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  text-align: center;
   height: 30px;
   max-width: 100px;
   margin-top: 15px;
